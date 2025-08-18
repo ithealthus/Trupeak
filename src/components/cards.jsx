@@ -1,13 +1,15 @@
+
 // import React from 'react';
 
 // function Cards({ data = [] }) {
 //   return (
-//     <div className="bg-two py-20 px-6 ">
+//     <div className="bg-two py-20 px-6">
 //       <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-stretch">
 //         {data.map((item, index) => (
 //           <div
 //             key={index}
-//             className="relative bg-four rounded-2xl shadow-xl p-6 font-nunito flex flex-col "
+//             className="relative bg-four rounded-2xl shadow-xl p-6 font-nunito flex flex-col opacity-0 animate-on-scroll animate-fadeIn"
+            
 //           >
 //             {/* Title Row with Number Badge */}
 //             <div className="flex items-center relative mb-4">
@@ -27,12 +29,21 @@
 //             </ul>
 
 //             {/* Push button to bottom */}
-//             <div className="mt-auto pt-4">
+//             {/* <div className="mt-auto pt-4">
 //               <button className="inline-flex items-center bg-white text-two text-sm px-4 py-2 rounded-full shadow-md font-bold font-montserrat hover:scale-105 transition-transform">
 //                 Read More
 //                 <span className="ml-2 text-lg">▶</span>
 //               </button>
-//             </div>
+//             </div> */}
+//             <div className="mt-auto pt-4">
+//   {buttonText && (
+//     <button className="inline-flex items-center bg-white text-two text-sm px-4 py-2 rounded-full shadow-md font-bold font-montserrat hover:scale-105 transition-transform">
+//       {buttonText}
+//       <span className="ml-2 text-lg">▶</span>
+//     </button>
+//   )}
+// </div>
+
 //           </div>
 //         ))}
 //       </div>
@@ -51,7 +62,6 @@ function Cards({ data = [] }) {
           <div
             key={index}
             className="relative bg-four rounded-2xl shadow-xl p-6 font-nunito flex flex-col opacity-0 animate-on-scroll animate-fadeIn"
-            
           >
             {/* Title Row with Number Badge */}
             <div className="flex items-center relative mb-4">
@@ -70,12 +80,14 @@ function Cards({ data = [] }) {
               ))}
             </ul>
 
-            {/* Push button to bottom */}
+            {/* Render button only if buttonText exists */}
             <div className="mt-auto pt-4">
-              <button className="inline-flex items-center bg-white text-two text-sm px-4 py-2 rounded-full shadow-md font-bold font-montserrat hover:scale-105 transition-transform">
-                Read More
-                <span className="ml-2 text-lg">▶</span>
-              </button>
+              {item.buttonText && (
+                <button className="inline-flex items-center bg-white text-two text-sm px-4 py-2 rounded-full shadow-md font-bold font-montserrat hover:scale-105 transition-transform">
+                  {item.buttonText}
+                  <span className="ml-2 text-lg">▶</span>
+                </button>
+              )}
             </div>
           </div>
         ))}

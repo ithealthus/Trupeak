@@ -40,18 +40,16 @@ export default function Navbar() {
       category: "Regenerative Therapies",
       href: "/services/regenerative-therapies",
       subServices: [
-        {
-          name: "Restorative Medicine at Trupeak",
-          href: "/services/regenerative-therapies/restorative-medicine",
-        },
-        { name: "Cancer Nutrition at Trupeak", href: "#" },
-        { name: "Renal Nutrition", href:  "#" },
-        { name: "Hormone Optimisation Therapy", href:  "#" },
-        { name: "Pain Management", href:  "#" },
-        { name: "NAD+ Therapy", href:  "#" },
-        { name: "IV Therapy", href:  "#" },
-        { name: "Post-surgical Rehabilitation", href:  "#" },
-        { name: "Chronic Illness Management", href:  "#" },
+        
+        { name: "Restorative Medicine at Trupeak", href: "/services/regenerative-therapies/restorative-medicine" },
+        { name: "Cancer Nutrition at Trupeak", href: "/services/regenerative-therapies/cancer-nutrition" },
+        { name: "Renal Nutrition", href: "/services/regenerative-therapies/renal-nutrition" },
+        { name: "Hormone Optimisation Therapy", href: "/services/regenerative-therapies/hormone-optimisation-therapy" },
+        { name: "Pain Management", href: "/services/regenerative-therapies/pain-management" },
+        { name: "NAD+ Therapy", href: "/services/regenerative-therapies/nad-therapy" },
+        { name: "IV Therapy", href: "/services/regenerative-therapies/iv-therapy" },
+        { name: "Post-surgical Rehabilitation", href: "/services/regenerative-therapies/post-surgical" },
+        { name: "Chronic Illness Management", href: "/services/regenerative-therapies/chronic-illness" }
       ],
     },
     {
@@ -326,7 +324,7 @@ export default function Navbar() {
               )}
 
               {/* Sub-services */}
-              {services.map((cat, idx) =>
+              {/* {services.map((cat, idx) =>
                 activeMobileSubmenu === cat.category ? (
                   <div key={idx} className="mb-6">
                     <Link
@@ -349,7 +347,39 @@ export default function Navbar() {
                     </ul>
                   </div>
                 ) : null
-              )}
+              )} */}
+              {services.map((cat, idx) =>
+  activeMobileSubmenu === cat.category ? (
+    <div key={idx} className="mb-6">
+      <Link
+        href={cat.href}
+        className="text-xl font-bold text-gray-800 hover:text-green-600"
+        onClick={() => {
+          setActiveMobileSubmenu(null);  // Close submenu
+          setIsMobileMenuOpen(false);    // Close whole navbar
+        }}
+      >
+        {cat.category}
+      </Link>
+      <ul className="ml-4 mt-2">
+        {cat.subServices.map((sub, subIndex) => (
+          <li key={subIndex}>
+            <Link
+              href={sub.href}
+              className="text-gray-600 hover:text-green-500 text-sm"
+              onClick={() => {
+                  // Close submenu
+                setIsMobileMenuOpen(false);    // Close whole navbar
+              }}
+            >
+              {sub.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ) : null
+)}
             </div>
           )}
         </div>
