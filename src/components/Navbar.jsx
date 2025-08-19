@@ -1,46 +1,39 @@
-
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import MegaMenu from "./MegaMenu";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isMegaMenuOpen, setMegaMenuOpen] = useState(false);
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeMobileSubmenu, setActiveMobileSubmenu] = useState(null);
+const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+const [activeMobileSubmenu, setActiveMobileSubmenu] = useState(null);
+const [activeServiceCategory, setActiveServiceCategory] = useState(null); // New state
+const [isScrolled, setIsScrolled] = useState(false);
 
-  // const services = [
-  //   {
-  //     category: "Regenerative Therapies",
-  //     href: "/regenerative-therapies",
-  //     subServices: [
-  //       { name: "Restorative Medicine at Trupeak", href: "/restorative-medicine" },
-  //       { name: "Cancer Nutrition at Trupeak", href: "/cancer-nutrition" },
-  //       { name: "Renal Nutrition", href: "/renal-nutrition" },
-  //       { name: "Hormone Optimisation Therapy", href: "/hormone-therapy" },
-  //       { name: "Pain Management", href: "/pain-management" },
-  //       { name: "NAD+ Therapy", href: "/nad-therapy" },
-  //       { name: "IV Therapy", href: "/iv-therapy" },
-  //       { name: "Post-surgical Rehabilitation", href: "/post-surgical-rehab" },
-  //       { name: "Chronic Illness Management", href: "/chronic-illness" },
-  //     ],
-  //   },
-  //   {
-  //     category: "Wellness",
-  //     href: "/wellness",
-  //     subServices: [
-  //       { name: "Weight Management", href: "/weight-management" },
-  //       { name: "Sports Performance", href: "/sports-performance" },
-  //       { name: "Mental Wellness", href: "/mental-wellness" },
-  //     ],
-  //   },
-  // ];
+  const pathname = usePathname();
+
+  // Track scroll to toggle background
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    if (pathname === "/") {
+      window.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [pathname]);
+
+  // Example services data
   const services = [
     {
       category: "Regenerative Therapies",
       href: "/services/regenerative-therapies",
       subServices: [
-        
         { name: "Restorative Medicine at Trupeak", href: "/services/regenerative-therapies/restorative-medicine" },
         { name: "Cancer Nutrition at Trupeak", href: "/services/regenerative-therapies/cancer-nutrition" },
         { name: "Renal Nutrition", href: "/services/regenerative-therapies/renal-nutrition" },
@@ -56,65 +49,12 @@ export default function Navbar() {
       category: "Weight and Lean Muscle Management",
       href: "/services/weight-and-lean-muscle-management",
       subServices: [
-        { name: "Nutrition Counseling", href:  "#" },
-        { name: "Weight Management", href:  "#" },
-        { name: "Fitness Optimization", href:  "#" },
+        { name: "Nutrition Counseling", href: "#" },
+        { name: "Weight Management", href: "#" },
+        { name: "Fitness Optimization", href: "#" },
       ],
     },
-    {
-      category: "Immunity and Longevity",
-      href: "/services/immunity-and-longevity",
-      subServices: [
-        { name: "Nutrition Counseling", href:  "#" },
-        { name: "Weight Management", href:  "#" },
-        { name: "Fitness Optimization", href:  "#" },
-      ],
-    },
-    {
-      category: "Women Centric Health Interventions",
-      href: "/services/women-centric-health-interventions",
-      subServices: [
-        { name: "Nutrition Counseling", href:  "#" },
-        { name: "Weight Management", href:  "#" },
-        { name: "Fitness Optimization", href:  "#" },
-      ],
-    },
-    {
-      category: "Beauty Aesthetics",
-      href: "/services/beauty-aesthetics",
-      subServices: [
-        { name: "Nutrition Counseling", href:  "#" },
-        { name: "Weight Management", href:  "#" },
-        { name: "Fitness Optimization", href:  "#" },
-      ],
-    },
-    {
-      category: "Mental Health and Counselling",
-      href: "/services/mental-health-and-counselling",
-      subServices: [
-        { name: "Nutrition Counseling", href:  "#" },
-        { name: "Weight Management", href:  "#" },
-        { name: "Fitness Optimization", href:  "#" },
-      ],
-    },
-    {
-      category: "Ergogenic Medicine",
-      href: "/services/ergogenic-medicine",
-      subServices: [
-        { name: "Nutrition Counseling", href:  "#" },
-        { name: "Weight Management", href:  "#" },
-        { name: "Fitness Optimization", href:  "#" },
-      ],
-    },
-    {
-      category: "Technology",
-      href: "/services/technology",
-      subServices: [
-        { name: "Nutrition Counseling", href:  "#" },
-        { name: "Weight Management", href:  "#" },
-        { name: "Fitness Optimization", href:  "#" },
-      ],
-    },
+    // add more categories...
   ];
 
   let timeoutId = null;
@@ -129,64 +69,74 @@ export default function Navbar() {
     }, 300);
   };
 
+  // Dynamic navbar style: transparent on hero (homepage top), white otherwise
+//   const navbarClasses = `
+//    fixed top-0 left-0 w-full z-[9999] transition-colors duration-300 h-20 flex items-center
+//   ${pathname === "/" && !isScrolled ? "bg-transparent text-white" : "bg-white text-two shadow-md"}
+//  `;
+// const navbarClasses = `
+//   fixed top-0 left-0 w-full z-[9999] transition-colors duration-300 h-20 flex items-center
+//   ${
+//     isMegaMenuOpen
+//       ? "bg-white text-two shadow-md"
+//       : pathname === "/" && !isScrolled
+//       ? "bg-transparent text-white"
+//       : "bg-white text-two shadow-md"
+//   }
+// `;
+const navbarClasses = `
+  fixed top-0 left-0 w-full z-[9999] transition-colors duration-300 h-20 flex items-center
+  ${
+    isMobileMenuOpen || isMegaMenuOpen
+      ? "bg-white text-two shadow-md"
+      : pathname === "/" && !isScrolled
+      ? "bg-transparent text-white"
+      : "bg-white text-two shadow-md"
+  }
+`;
+
+
   return (
-    <nav className=" fixed top-0 left-0 w-full z-50 bg-white shadow-md py-2 ">
-      <div className="relative">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+    <>
+      {/* NAVBAR */}
+      <nav className={navbarClasses}>
+        <div className="max-w-7xl mx-auto px-2 md:px-14 flex items-center justify-between w-full h-full border-b-2 border-one">
+
           {/* Left menu (desktop only) */}
-          <div className="hidden md:flex items-center space-x-8 text-two text-2xl font-semibold">
-            {/* Services Button */}
+          <div className="hidden md:flex items-center space-x-8 text-xl font-semibold">
             <div
               className="relative"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="hover:text-one cursor-pointer">
-                Services
-              </button>
+              <button className="hover:text-one cursor-pointer">Services</button>
             </div>
-
-            <Link href="/at-home" className="hover:text-one">
-              At-Home
-            </Link>
-            <Link href="/locations" className="hover:text-one">
-              Locations
-            </Link>
+            <Link href="/at-home" className="hover:text-one">At-Home</Link>
+            <Link href="/locations" className="hover:text-one">Locations</Link>
           </div>
 
           {/* Logo */}
-          <div className="flex items-center justify-start px-0">
-            {/* Desktop Logo */}
-            <img
-              src="/images/truepeaklogo.png"
-              alt="Trupeak Health Desktop"
-              className="hidden md:block h-80 w-auto object-contain"
-            />
-            {/* Mobile Logo */}
-            <img
-              src="/images/truepeaklogo.png"
-              alt="Trupeak Health Mobile"
-              className="block md:hidden h-48 w-auto object-contain"
-            />
-          </div>
+         <div className="flex-1 flex md:justify-center justify-start items-center">
+  <img
+    src="/images/truepeaklogo.png"
+    alt="Trupeak Health Logo"
+    className="h-36 md:h-48 w-auto object-cover"
+  />
+</div>
+
+
 
           {/* Right menu (desktop only) */}
-          <ul className="hidden md:flex space-x-8 text-two text-2xl font-semibold list-none">
-            <li className="hover:text-one">
-              <Link href="/blog">Blogs</Link>
-            </li>
-            <li className="hover:text-one">
-              <Link href="/about-us">About Us</Link>
-            </li>
-            <li className="hover:text-one">
-              <Link href="/contact">Contact Us</Link>
-            </li>
+          <ul className="hidden md:flex space-x-8 text-xl font-semibold list-none">
+            <li className="hover:text-one"><Link href="/blog">Blogs</Link></li>
+            <li className="hover:text-one"><Link href="/about-us">About Us</Link></li>
+            <li className="hover:text-one"><Link href="/contact">Contact Us</Link></li>
           </ul>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-3xl text-two focus:outline-none"
+            className="md:hidden text-3xl focus:outline-none"
           >
             ☰
           </button>
@@ -195,7 +145,7 @@ export default function Navbar() {
         {/* Full-Width Mega Menu */}
         {isMegaMenuOpen && (
           <div
-            className="fixed top-[64px] left-0 w-full bg-white shadow-lg border-t z-50"
+            className="absolute top-full left-0 w-full bg-white shadow-lg border-t z-40"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
@@ -204,186 +154,131 @@ export default function Navbar() {
             </div>
           </div>
         )}
-      </div>
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden fixed top-16 left-0 w-full h-screen bg-white z-40 p-6 overflow-y-auto">
-          {!activeMobileSubmenu ? (
-            <ul className="space-y-4 text-two text-lg font-semibold">
-              <li>
-                <button
-                  className="w-full flex justify-between items-center text-left"
-                  onClick={() => setActiveMobileSubmenu("services")}
-                >
-                  <span>Services</span>
-                  <span className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-4 h-4 text-gray-600"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </span>
-                </button>
-              </li>
-              <li>
-                <Link href="/at-home" onClick={() => setMobileMenuOpen(false)}>
-                  At-Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/locations"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Locations
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" onClick={() => setMobileMenuOpen(false)}>
-                  Blogs
-                </Link>
-              </li>
-              <li>
-                <Link href="/about-us" onClick={() => setMobileMenuOpen(false)}>
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
-          ) : (
-            <div>
-              <button
-                className="mb-4 flex items-center gap-2 text-one font-bold"
-                onClick={() => setActiveMobileSubmenu(null)}
-              >
-                <span className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4 text-gray-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15 19l-7-7 7-7"
-                    />
-                  </svg>
-                </span>
-                <span>Back</span>
-              </button>
+      </nav>
 
-              {/* Submenus */}
-              {activeMobileSubmenu === "services" && (
-                <ul className="space-y-4">
-                  {services.map((cat, idx) => (
+      {/* MOBILE MENU */}
+{isMobileMenuOpen && (
+  <div className="md:hidden fixed top-20 left-0 w-full h-screen bg-white z-40 p-6 overflow-y-auto">
+    {!activeMobileSubmenu ? (
+      // Step 0: Main menu
+      <ul className="space-y-6 text-lg font-semibold">
+        <li>
+          <button
+            className="w-full flex justify-between items-center text-left"
+            onClick={() => setActiveMobileSubmenu("services")}
+          >
+            <span>Services</span>
+            <span className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </button>
+        </li>
 
-                      <li key={idx} className="w-full flex justify-between items-center text-left font-semibold">
-                        <Link onClick={() => setMobileMenuOpen(false)} href={cat.href}>
-                          <span >{cat.category}</span>
-                        </Link>
-                        <button
-                          onClick={() => setActiveMobileSubmenu(cat.category)}
-                        >
-                          <span className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="w-4 h-4 text-gray-600"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              strokeWidth={2}
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M9 5l7 7-7 7"
-                              />
-                            </svg>
-                          </span>
-                        </button>
-                      </li>
-                 
-                  ))}
-                </ul>
-              )}
+        {/* Other static links */}
+        <li><Link href="/at-home" onClick={() => setMobileMenuOpen(false)}>At-Home</Link></li>
+        <li><Link href="/locations" onClick={() => setMobileMenuOpen(false)}>Locations</Link></li>
+        <li><Link href="/blog" onClick={() => setMobileMenuOpen(false)}>Blogs</Link></li>
+        <li><Link href="/about-us" onClick={() => setMobileMenuOpen(false)}>About Us</Link></li>
+        <li><Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link></li>
+      </ul>
+    ) : activeMobileSubmenu === "services" && !activeServiceCategory ? (
+      // Step 1: Show service categories
+      <div>
+        <button
+          className="mb-6 flex items-center gap-3 text-one font-bold"
+          onClick={() => setActiveMobileSubmenu(null)}
+        >
+          <span className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </span>
+          <span>Back</span>
+        </button>
 
-              {/* Sub-services */}
-              {/* {services.map((cat, idx) =>
-                activeMobileSubmenu === cat.category ? (
-                  <div key={idx} className="mb-6">
-                    <Link
-                      href={cat.href}
-                      className="text-xl font-bold text-gray-800 hover:text-green-600"
-                    >
-                      {cat.category}
-                    </Link>
-                    <ul className="ml-4 mt-2">
-                      {cat.subServices.map((sub, subIndex) => (
-                        <li key={subIndex}>
-                          <Link
-                            href={sub.href}
-                            className="text-gray-600 hover:text-green-500 text-sm"
-                          >
-                            {sub.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null
-              )} */}
-              {services.map((cat, idx) =>
-  activeMobileSubmenu === cat.category ? (
-    <div key={idx} className="mb-6">
+        <ul className="space-y-4">
+          {services.map((cat, idx) => (
+  <li key={idx}>
+    <div className="flex justify-between items-center">
+      {/* Category Link */}
       <Link
         href={cat.href}
-        className="text-xl font-bold text-gray-800 hover:text-green-600"
-        onClick={() => {
-          setActiveMobileSubmenu(null);  // Close submenu
-          setIsMobileMenuOpen(false);    // Close whole navbar
-        }}
+        className="text-lg font-bold text-gray-800"
+        onClick={() => setMobileMenuOpen(false)} // close menu on click
       >
         {cat.category}
       </Link>
-      <ul className="ml-4 mt-2">
-        {cat.subServices.map((sub, subIndex) => (
-          <li key={subIndex}>
-            <Link
-              href={sub.href}
-              className="text-gray-600 hover:text-green-500 text-sm"
-              onClick={() => {
-                  // Close submenu
-                setIsMobileMenuOpen(false);    // Close whole navbar
-              }}
-            >
-              {sub.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
+
+      {/* Arrow to open subservices */}
+      <button
+        className="ml-2 flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full"
+        onClick={() => setActiveServiceCategory(cat.category)}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-3 h-3 text-gray-600"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
     </div>
-  ) : null
-)}
+  </li>
+))}
+        </ul>
+      </div>
+    ) : (
+      // Step 2: Show subservices of selected category
+      <div>
+        <button
+          className="mb-6 flex items-center gap-3 text-one font-bold"
+          onClick={() => setActiveServiceCategory(null)}
+        >
+          <span className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </span>
+          <span>Back</span>
+        </button>
+
+        {services
+          .filter(cat => cat.category === activeServiceCategory)
+          .map((cat, idx) => (
+            <div key={idx}>
+              <h3 className="text-xl font-bold mb-3">{cat.category}</h3>
+              <ul className="ml-4 space-y-2">
+                {cat.subServices.map((sub, subIdx) => (
+                  <li key={subIdx}>
+                    <Link
+                      href={sub.href}
+                      className="block text-gray-600 hover:text-one text-sm"
+                      onClick={() => {
+                        // Close mobile menu on click
+                        setMobileMenuOpen(false);
+                        setActiveMobileSubmenu(null);
+                        setActiveServiceCategory(null);
+                      }}
+                    >
+                      {sub.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          )}
-        </div>
-      )}
-    </nav>
+          ))}
+      </div>
+    )}
+  </div>
+)}
+
+
+
+    </>
   );
 }

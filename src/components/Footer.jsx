@@ -23,7 +23,7 @@ const Footer = () => {
           <p className="text-white/80 mb-4 text-3xl">
             Transform into the <br /> new <span className="text-one font-semibold">You</span>
           </p>
-          <p className="text-sm text-white/60 mb-2">Subscribe to our Newsletter</p>
+          <p className="text-sm font-semibold text-white mb-2">Subscribe to our Newsletter</p>
           <form className="flex items-center bg-two rounded-full overflow-hidden max-w-xs border-4 border-one">
             <input
               type="email"

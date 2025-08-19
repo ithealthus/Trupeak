@@ -118,7 +118,7 @@ module.exports = {
         zoomIn: "zoomIn 1s ease-out forwards",
         zoomOut: "zoomOut 1s ease-out forwards",
         rotateIn: "rotateIn 1s ease-out forwards",
-        marquee: "marquee 20s linear infinite",
+        marquee: "marquee 30s linear infinite",
       },
     },
   },

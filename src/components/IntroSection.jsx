@@ -49,7 +49,7 @@ const IntroSection = () => {
     <section className="w-full bg-two py-10 text-white md:py-20 px-4 shadow-xl border-b-4 border-[#7ec3b0] relative">
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center relative z-10">
         {/* Headline */}
-        <h2 className="text-secondary font-body font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed px-2">
+        <h2 className="text-secondary font-body font-semibold text-xl sm:text-xl md:text-2xl lg:text-3xl leading-relaxed px-2">
           Leverage precision diagnostics to transform healthcare outcomes for
           patients and enable them to reach their “Tru” peak state of being from
           a physical, mental, and metabolic purview
