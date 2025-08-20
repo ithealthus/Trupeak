@@ -191,9 +191,13 @@ export default function MegaMenu({ isOpen }) {
     {
       category: { name: "Weight and Lean Muscle Management", href: "/services/weight-and-lean-muscle-management" },
       subServices: [
-        { name: "Nutrition Counseling", href: "/nutrition" },
-        { name: "Weight Management", href: "/weight-management" },
-        { name: "Fitness Optimization", href: "/fitness" }
+        { name: "Weight Optimisation Tracking", href: "/services/weight-and-lean-muscle-management/weight-optimisation-tracking" },
+        { name: "Functional Medicine Consultation", href: "/weight-management" },
+        { name: "MuscleSound Analysis (Muscle Ultrasound)", href: "/fitness" },
+        { name: "InBody 970: Bio-electrical Impedance Analysis", href: "/nutrition" },
+        { name: "Q-NRG: Indirect Calorimetry", href: "/weight-management" },
+        { name: "Sleep Cycle Analysis at Trupeak", href: "/fitness" },
+        { name: "Diet Management and Nutrition Counselling", href: "/fitness" }
       ]
     },
     {

@@ -4,9 +4,9 @@ import Imagetext from '@/components/Imagetext';
 import MonitoringSection from '@/components/weight-management/MonitoringSection';
 import WhatWeTrack from '@/components/weight-management/WhatWeTrack';
 import WhatWeOffer from '@/components/weight-management/WhatWeOffer';
-import WhyTrupeakBeauty from '../../beauty-aesthetics/WhyTrupeakBeauty';
-import InfoSection from '@/components/regenerative-therapies/WhoThisIsForSection';
-import InfoBanner from '@/components/regenerative-therapies/InfoBanner';
+import WhoThisIsFor from '@/components/weight-management/WhoThisIsFor';
+import BenefitsSection from '@/components/weight-management/BenefitsSection';
+
 import CtaSection from '@/components/regenerative-therapies/CtaSection';
 import ContactForm from '@/components/ContactForm';
 import ContactSection from '@/components/ContactSection';
@@ -43,41 +43,65 @@ const pageData = {
   },
   
   
-  whyTrupeak: {
-    title: "What We Track",
-    description:"Every step in your transformation is supported by targeted, clinically valid metrics. Our tracking system include",
-    points: [
-      "Comprehensive tracking of what truly matters",
-      "Evidence-based adjustments for results",
-      "1:1 coaching and digital monitoring",
-      "Integrated support for lifestyle, nutrition, and fitness",
-    ],
-    image: "/images/regenerative-therapies/iv-theraphy/3.webp"
-  },
+ whyTrupeak: {
+  title: "What We Track",
+  description:
+    "Every step in your transformation is supported by targeted, clinically valid metrics. Our tracking system includes",
+  points: [
+    "Body Composition Monitoring through InBody970 scans",
+    "Basal Metabolic Rate (BMR) Assessments to guide caloric intake",
+    "Segmental Fat and Muscle Analysis to distinguish healthy change from muscle depletion",
+    "Metabolic Trend Reporting based on Q-NRG testing (Using Indirect Calorimetry)",
+    "Girth and Circumference measures are used when relevant for regional fat tracking"
+  ]
+},
     whatWeOffer: {
     title: "What We Offer",
-    description: "Work",
+    description: "At Trupeak, Weight Optimization Tracking is part of a comprehensive, science-backed care model that addresses the root drivers of metabolic change. Your personalized program may include:",
     image: "/images/regenerative-therapies/iv-theraphy/3.webp",
     points: [
-      { title: "Functional Medicine Insights", description: "..." },
-      { title: "MuscleSound Analysis", description: "..." },
-      { title: "Sleep Cycle Assessments", description: "..." },
-      { title: "Precision Nutrition Counselling", description: "..." },
+      { title: "Functional Medicine Insights", description: "To uncover hormonal, inflammatory, or lifestyle-related blocks to weight and metabolic regulation" },
+      { title: "MuscleSound Analysis", description: "To assess muscle quality, intramuscular energy stores, and monitor lean mass preservation" },
+      { title: "Sleep Cycle Assessments", description: "To identify circadian rhythm disruptions and support hormonal balance essential for fat metabolism" },
+      { title: "Precision Nutrition Counselling", description: "Based on advanced diagnostic testing, to align your dietary strategy with your metabolic needs" },
     ]
 },
   infoSection: {
-    title: "Who This Is For",
-    description: "Our weight optimisation tracking programs are ideal for anyone seeking measurable and sustainable results. Perfect for:",
-    items: [
-      { description: "Individuals aiming for fat loss or muscle gain" },
-      { description: "People looking to maintain a healthy lifestyle" },
-      { description: "Patients requiring metabolic health support" },
-      { description: "Anyone seeking structured, evidence-based tracking" },
-    ],
-    bgColor: "#E6C98C",
-    titleColor: "#2BBFA7",
-    cardBgColor: "#0D1B33"
-  },
+  title: "Who This Is For",
+  description: "Our weight optimisation tracking programs are ideal for anyone seeking measurable and sustainable results. Perfect for:",
+  items: [
+    { description: "Individuals aiming for fat loss or muscle gain" },
+    { description: "People looking to maintain a healthy lifestyle" },
+    { description: "Patients requiring metabolic health support" },
+    { description: "Anyone seeking structured, evidence-based tracking" },
+  ],
+  bgColor: "#0D1B33",
+  titleColor: "#FFFFFF",
+  cardBgColor: "white"
+},
+benefitsData: {
+  title: "Benefits of Weight Optimization Tracking",
+  benefits: [
+    {
+      text: "Tracks fat loss and muscle preservation with clinical accuracy",
+      bgColor: "bg-[#122644]",
+    },
+    {
+      text: "Identifies metabolic slowdowns and hormonal barriers to progress",
+      bgColor: "bg-[#E2C879]",
+    },
+    {
+      text: "Allows real-time plan adjustments based on body composition trends",
+      bgColor: "bg-[#122644]",
+    },
+    {
+      text: "Supports sustainable, physician-guided weight management",
+      bgColor: "bg-[#2C8C72]",
+    },
+  ],
+  bgColor: "bg-white" // optional background color for the section
+},
+
   infoBanners: [
     {
       title: "Benefits of Weight Optimisation at Trupeak",
@@ -120,7 +144,7 @@ const pageData = {
 };
 
 const Page = () => {
-  const { hero, imageText, monitoring,  whyTrupeak, whatWeOffer, infoSection, infoBanners, cta } = pageData;
+  const { hero, imageText, monitoring,  whyTrupeak, whatWeOffer, infoSection,benefitsData, cta } = pageData;
 
   return (
     <>
@@ -129,21 +153,8 @@ const Page = () => {
       <MonitoringSection {...monitoring}/>
       <WhatWeTrack {...whyTrupeak}/>
       <WhatWeOffer {...whatWeOffer}/>
-     
-      
-      <InfoSection
-        title={infoSection.title}
-        description={infoSection.description}
-        items={infoSection.items}
-        bgColor={infoSection.bgColor}
-        titleColor={infoSection.titleColor}
-        cardBgColor={infoSection.cardBgColor}
-      />
-
-      {infoBanners.map((banner, index) => (
-        <InfoBanner key={index} {...banner} />
-      ))}
-
+      <WhoThisIsFor {...infoSection} />
+      <BenefitsSection {...benefitsData} />
       <CtaSection {...cta} />
       <ContactSection />
       <ContactForm />

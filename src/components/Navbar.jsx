@@ -99,8 +99,9 @@ const navbarClasses = `
   return (
     <>
       {/* NAVBAR */}
-      <nav className={navbarClasses}>
-        <div className="max-w-7xl mx-auto px-2 md:px-14 flex items-center justify-between w-full h-full border-b-2 border-one">
+      <nav className={`${navbarClasses}border-b-2 border-one`}>
+
+        <div className="max-w-7xl mx-auto px-2 md:px-6  flex items-center justify-between w-full h-full  ">
 
           {/* Left menu (desktop only) */}
           <div className="hidden md:flex items-center space-x-8 text-xl font-semibold">
