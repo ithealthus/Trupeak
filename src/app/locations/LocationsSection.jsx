@@ -1,8 +1,10 @@
+"use client";  // at the top if it uses useState, useEffect
+
 import React from "react";
 
 const LocationsSection = () => {
   return (
-    <section className="relative pt-24"> {/* Adjust pt-24 for navbar height */}
+    <section className="relative pt-12"> {/* Adjust pt-24 for navbar height */}
       {/* Top Section with Heading */}
       <div className="bg-two text-center px-4 sm:px-6 lg:px-8">
         <h2 className="text-one text-3xl sm:text-4xl md:text-5xl font-bold pt-16">
