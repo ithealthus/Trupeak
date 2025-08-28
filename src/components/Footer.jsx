@@ -1,7 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
-import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaInstagram,
+  FaFacebookF,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -122,7 +128,11 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <ul className="space-y-6 text-base text-white/80">
               <li className="flex items-center gap-4">
-                <MdEmail size={32} color="#E1C78F" />
+                <FaEnvelope
+                  size={32}
+                  color="#E1C78F"
+                  className="flex-shrink-0"
+                />
                 <a
                   href="mailto:info@trupeakhealth.in"
                   className="hover:underline"
@@ -130,12 +140,22 @@ const Footer = () => {
                   info@trupeakhealth.in
                 </a>
               </li>
+
               <li className="flex items-center gap-4">
-                <MdPhone size={32} color="#E1C78F" />
+                <FaPhoneAlt
+                  size={32}
+                  color="#E1C78F"
+                  className="flex-shrink-0"
+                />
                 <span>+91 982-037-3373</span>
               </li>
+
               <li className="flex items-start gap-4">
-                <MdLocationOn size={32} color="#E1C78F" />
+                <FaMapMarkerAlt
+                  size={32}
+                  color="#E1C78F"
+                  className="flex-shrink-0"
+                />
                 <span>
                   Trupeak Health, Suite A/405,
                   <br />
