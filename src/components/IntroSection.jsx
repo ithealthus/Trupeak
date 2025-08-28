@@ -8,12 +8,12 @@
 //         <div className="md:w-full text-center  mx-5">
 //           <h2 className="text-secondary font-body font-semibold text-2xl sm:text-3xl md:text-3xl lg:text-4xl leading-snug">
 //             Leverage precision diagnostics to transform healthcare outcomes for patients and enable them to reach their “Tru” peak state of being from a physical, mental, and metabolic purview
-           
+
 //           </h2>
 //         </div>
 
 //         {/* Right: Paragraph */}
-        
+
 //       </div>
 
 //       {/* 🔻 Down Arrow */}
@@ -57,7 +57,7 @@ const IntroSection = () => {
       </div>
 
       {/* 🔻 Down Arrow */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-2.5rem] sm:bottom-[-3rem]">
+      {/* <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-2.5rem] sm:bottom-[-3rem]">
         <div className="w-16 h-16 sm:w-20 sm:h-20 bg-[#2C886A] rounded-full flex items-center justify-center shadow-xl">
           <svg
             width="40"
@@ -76,7 +76,7 @@ const IntroSection = () => {
             />
           </svg>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

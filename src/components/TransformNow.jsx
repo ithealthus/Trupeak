@@ -39,10 +39,9 @@ const TransformNow = () => {
     <section className="relative bg-white min-h-[500px] overflow-hidden px-4 sm:px-8 md:px-12">
       {/* Content */}
       <div className="flex flex-col lg:flex-row items-center justify-between relative z-10 pt-16 sm:pt-20 md:pt-24 text-center lg:text-left">
-        
         {/* Left: Text & Button */}
         <div className="flex-1 flex flex-col justify-center items-center lg:items-start max-w-lg">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium font-body text-two leading-snug mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold font-body text-two leading-snug mb-4">
             Ready to begin your healthcare
             <br className="hidden sm:block" />
             transformation journey?

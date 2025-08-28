@@ -16,11 +16,11 @@ export default function Navbar() {
   const timeoutRef = useRef(null);
 
   // Scroll detection for background change
-useEffect(() => {
-  const handleScroll = () => setIsScrolled(window.scrollY > 50);
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Cleanup timeout on unmount
   useEffect(() => {
@@ -35,15 +35,42 @@ useEffect(() => {
       category: "Regenerative Therapies",
       href: "/services/regenerative-therapies",
       subServices: [
-        { name: "Restorative Medicine", href: "/services/regenerative-therapies/restorative-medicine" },
-        { name: "Cancer Nutrition", href: "/services/regenerative-therapies/cancer-nutrition" },
-        { name: "Renal Nutrition", href: "/services/regenerative-therapies/renal-nutrition" },
-        { name: "Hormone Optimisation Therapy", href: "/services/regenerative-therapies/hormone-optimisation-therapy" },
-        { name: "Pain Management", href: "/services/regenerative-therapies/pain-management" },
-        { name: "NAD+ Therapy", href: "/services/regenerative-therapies/nad-therapy" },
-        { name: "IV Therapy", href: "/services/regenerative-therapies/iv-therapy" },
-        { name: "Post-surgical Rehabilitation", href: "/services/regenerative-therapies/post-surgical" },
-        { name: "Chronic Illness Management", href: "/services/regenerative-therapies/chronic-illness" },
+        {
+          name: "Restorative Medicine",
+          href: "/services/regenerative-therapies/restorative-medicine",
+        },
+        {
+          name: "Cancer Nutrition",
+          href: "/services/regenerative-therapies/cancer-nutrition",
+        },
+        {
+          name: "Renal Nutrition",
+          href: "/services/regenerative-therapies/renal-nutrition",
+        },
+        {
+          name: "Hormone Optimisation Therapy",
+          href: "/services/regenerative-therapies/hormone-optimisation-therapy",
+        },
+        {
+          name: "Pain Management",
+          href: "/services/regenerative-therapies/pain-management",
+        },
+        {
+          name: "NAD+ Therapy",
+          href: "/services/regenerative-therapies/nad-therapy",
+        },
+        {
+          name: "IV Therapy",
+          href: "/services/regenerative-therapies/iv-therapy",
+        },
+        {
+          name: "Post-surgical Rehabilitation",
+          href: "/services/regenerative-therapies/post-surgical",
+        },
+        {
+          name: "Chronic Illness Management",
+          href: "/services/regenerative-therapies/chronic-illness",
+        },
       ],
     },
     {
@@ -71,7 +98,7 @@ useEffect(() => {
 
   // Navbar dynamic classes
   const navbarClasses = `
-    fixed top-0 left-0 w-full z-[9999] transition-colors duration-300 h-20 flex items-center border-b-2 border-one
+    fixed top-0 left-0 w-full z-[9999] transition-colors duration-300 h-24 flex items-center border-b-2 border-one
     ${
       isMobileMenuOpen || isMegaMenuOpen
         ? "bg-white text-two shadow-md"
@@ -85,36 +112,48 @@ useEffect(() => {
     <>
       {/* NAVBAR */}
       <nav className={navbarClasses}>
-        <div className="max-w-8xl mx-auto px-4 flex items-center justify-between w-full h-full">
-          {/* Logo */}
-          <div>
-            <Link href="/">
-              <img
-                src="/images/truepeaklogo.png"
-                alt="Trupeak Health Logo"
-                className="h-48 w-auto object-contain"
-              />
-            </Link>
-          </div>
-
-          {/* Desktop Links */}
-          <div className="hidden md:flex items-center space-x-8 text-lg font-semibold ml-auto">
+        <div className="max-w-8xl mx-auto px-20 flex items-center justify-between w-full h-full">
+          {/* Left Links */}
+          <div className="hidden md:flex items-center space-x-16 text-lg font-semibold">
             <div
               className="relative"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="hover:text-one">Services</button>
+              <button className="hover:text-one text-xl">Services</button>
             </div>
-            <Link href="/at-home" className="hover:text-one">At-Home</Link>
-            <Link href="/locations" className="hover:text-one">Locations</Link>
-            <Link href="/blog" className="hover:text-one">Blogs</Link>
-            <Link href="/about-us" className="hover:text-one">About Us</Link>
+            <Link href="/at-home" className="hover:text-one text-xl">
+              At-Home
+            </Link>
+            <Link href="/about-us" className="hover:text-one text-xl">
+              About Us
+            </Link>
+          </div>
+
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/">
+              <img
+                src="/images/truepeaklogo.png"
+                alt="Trupeak Health Logo"
+                className="h-56 w-auto object-contain"
+              />
+            </Link>
+          </div>
+
+          {/* Right Links */}
+          <div className="hidden md:flex items-center space-x-16 text-lg font-semibold">
+            <Link href="/locations" className="hover:text-one text-xl">
+              Locations
+            </Link>
+            <Link href="/blog" className="hover:text-one text-xl">
+              Blogs
+            </Link>
             <Link
               href="/contact"
-              className="bg-three text-white px-4 py-2 rounded-full hover:bg-three/80 transition"
+              className="bg-three text-white px-6 py-2 rounded-full hover:bg-three/80 transition text-xl"
             >
-              Contact Us
+              Join Us
             </Link>
           </div>
 
@@ -129,14 +168,12 @@ useEffect(() => {
 
         {/* Mega Menu (always mounted, hidden via CSS) */}
         <div
-  className="absolute top-full left-0 w-full"
-  onMouseEnter={handleMouseEnter}
-  onMouseLeave={handleMouseLeave}
->
-  <MegaMenu isOpen={isMegaMenuOpen} />
-</div>
-
-
+          className="absolute top-full left-0 w-full"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <MegaMenu isOpen={isMegaMenuOpen} />
+        </div>
       </nav>
 
       {/* MOBILE MENU */}
@@ -159,12 +196,36 @@ useEffect(() => {
                 </span>
               </button>
             </li>
-            <li><Link href="/at-home" onClick={() => setMobileMenuOpen(false)}>At-Home</Link></li>
-            <li><Link href="/locations" onClick={() => setMobileMenuOpen(false)}>Locations</Link></li>
-            <li><Link href="/faq" onClick={() => setMobileMenuOpen(false)}>FAQ</Link></li>
-            <li><Link href="/blog" onClick={() => setMobileMenuOpen(false)}>Blogs</Link></li>
-            <li><Link href="/about-us" onClick={() => setMobileMenuOpen(false)}>About Us</Link></li>
-            <li><Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link></li>
+            <li>
+              <Link href="/at-home" onClick={() => setMobileMenuOpen(false)}>
+                At-Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/locations" onClick={() => setMobileMenuOpen(false)}>
+                Locations
+              </Link>
+            </li>
+            <li>
+              <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>
+                FAQ
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog" onClick={() => setMobileMenuOpen(false)}>
+                Blogs
+              </Link>
+            </li>
+            <li>
+              <Link href="/about-us" onClick={() => setMobileMenuOpen(false)}>
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
+                Contact Us
+              </Link>
+            </li>
             <li>
               <Link
                 href="/join-us"
@@ -214,7 +275,7 @@ useEffect(() => {
               ← Back
             </button>
             {services
-              .filter(cat => cat.category === activeServiceCategory)
+              .filter((cat) => cat.category === activeServiceCategory)
               .map((cat, idx) => (
                 <div key={idx}>
                   <h3 className="text-xl font-bold mb-3">{cat.category}</h3>
