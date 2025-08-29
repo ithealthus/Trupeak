@@ -15,12 +15,12 @@ const pageData = {
   hero: {
     title: "Weight Optimisation Tracking",
     subtitle: "Track what matters. Adjust what works. Sustain long-term results.",
-   mainImage: "/images/regenerative-therapies/iv-theraphy/2.webp",
-    circleImage: "/images/regenerative-therapies/iv-theraphy/1.webp"
+   mainImage: "/images/weight-lean/weight-optimisation-tracking/2.webp",
+    circleImage: "/images/weight-lean/weight-optimisation-tracking/1.webp"
   },
   imageText: {
     description: "At Trupeak, weight management isn’t about rapid loss or guesswork. It’s a measured, data-informed process rooted in your unique metabolic profile. Our Weight Optimization Tracking system monitors body composition changes with clinical precision, offering you continuous insight into fat reduction, lean muscle preservation, and metabolic trends that reflect real progress.This program is designed for individuals who seek sustainable weight optimization under the guidance of medical experts. Whether your goal is fat loss, metabolic control, or lean body mass improvement, our structured tracking process ensures your plan adapts as your body evolves.",
-    image: "/images/regenerative-therapies/iv-theraphy/2.webp",
+    image: "/images/weight-lean/weight-optimisation-tracking/3.webp",
     reverse: true,
     bgColor: "bg-one",
     textColor: "text-two"
@@ -29,7 +29,7 @@ const pageData = {
     title: "Why Monitoring Matters",
     description:
       "Weight loss without context can be misleading. Losing muscle during dieting can slow metabolism and impair strength. Our goal is metabolic reprogramming, not short-term dieting. With regular tracking:",
-    image: "/images/regenerative-therapies/iv-theraphy/3.webp", // Add the correct image path
+    image: "/images/weight-lean/weight-optimisation-tracking/4.webp", // Add the correct image path
     pointsLeft: [
       "You preserve lean muscle mass",
       "You reduce the risk of Insulin Resistance and Inflammation"
@@ -58,7 +58,7 @@ const pageData = {
     whatWeOffer: {
     title: "What We Offer",
     description: "At Trupeak, Weight Optimization Tracking is part of a comprehensive, science-backed care model that addresses the root drivers of metabolic change. Your personalized program may include:",
-    image: "/images/regenerative-therapies/iv-theraphy/3.webp",
+    image: "/images/weight-lean/weight-optimisation-tracking/5.webp",
     points: [
       { title: "Functional Medicine Insights", description: "To uncover hormonal, inflammatory, or lifestyle-related blocks to weight and metabolic regulation" },
       { title: "MuscleSound Analysis", description: "To assess muscle quality, intramuscular energy stores, and monitor lean mass preservation" },
@@ -113,7 +113,7 @@ benefitsData: {
         "Prevent weight regain",
         "Enhance long-term health outcomes",
       ],
-      image: "/images/regenerative-therapies/weight-tracking/5.webp",
+      image: "/images/weight-lean/weight-optimisation-tracking/5.webp",
       bgColor: "#0D1B33",
       textColor: "#FFFFFF",
       highlightColor: "#E6C98C",
@@ -127,7 +127,7 @@ benefitsData: {
         "Sustainable healthy lifestyle habits",
         "Reduced metabolic health risks",
       ],
-      image: "/images/regenerative-therapies/weight-tracking/6.webp",
+      image: "/images/weight-lean/weight-optimisation-tracking/6.webp",
       bgColor: "#0D1B33",
       textColor: "#FFFFFF",
       highlightColor: "#E6C98C",
@@ -139,7 +139,7 @@ benefitsData: {
     description: "Trupeak’s personalised tracking program guides you every step of the way, helping you make informed adjustments and achieve your goals.",
     buttonText: "Book Your Appointment",
     buttonLink: "#",
-    backgroundImage: "/images/regenerative-therapies/weight-tracking/7.webp"
+    backgroundImage: "/images/weight-lean/weight-optimisation-tracking/6.webp"
   }
 };
 

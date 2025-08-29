@@ -10,7 +10,7 @@ const BlogSingleMain = ({ slug }) => {
   useEffect(() => {
     if (!slug) return;
 
-    fetch(`https://trupeakhealth.in/masterlogin/wp-json/custom-api/v1/blog/${slug}`)
+    fetch(`https://backend.trupeakhealth.in/wp-json/custom-api/v1/blog/${slug}`)
       .then((res) => res.json())
       .then((data) => {
         setBlog(data);

@@ -15,13 +15,13 @@ const pageData = {
   hero: {
     title: "Sleep Cycle Analysis at Trupeak",
     subtitle: "Decode your rest. Reclaim your rhythm.",
-    mainImage: "/images/regenerative-therapies/sleep/1.webp",
-    circleImage: "/images/regenerative-therapies/sleep/2.webp"
+    mainImage: "/images/weight-lean/sleep-cycle/2.webp",
+    circleImage: "/images/weight-lean/sleep-cycle/1.webp"
   },
   imageText: {
     description:
       "At TruPeak, sleep is a biological cornerstone for metabolic health, hormone balance, mental clarity, and performance. Our non-invasive Sleep Cycle Analysis evaluates circadian rhythm, sleep architecture, and disruptions to reveal how rest impacts your energy, weight, cognition, and immunity.",
-    image: "/images/regenerative-therapies/sleep/3.webp",
+    image: "/images/weight-lean/sleep-cycle/3.webp",
     reverse: true,
     bgColor: "bg-one",
     textColor: "text-two"
@@ -30,7 +30,7 @@ const pageData = {
     title: "Why Sleep Matters in Your Health Journey",
     description:
       "Poor sleep is more than just feeling tired. It disrupts cortisol regulation, insulin sensitivity, thyroid function, and even appetite control. Over time, it contributes to chronic inflammation, weight gain, reduced muscle recovery, and mood instability.",
-    image: "/images/regenerative-therapies/sleep/4.webp",
+    image: "/images/weight-lean/sleep-cycle/4.webp",
     pointsLeft: [
       "Disrupted cortisol regulation and stress response",
       "Impaired insulin sensitivity and thyroid function"
@@ -59,7 +59,7 @@ const pageData = {
     title: "What We Offer",
     description:
       "Your sleep analysis is never standalone; it informs your full Trupeak care plan. Based on your results, we may recommend:",
-    image: "/images/regenerative-therapies/sleep/5.webp",
+    image: "/images/weight-lean/sleep-cycle/5.webp",
     points: [
       {
         title: "Circadian & Hormone Regulation",
@@ -113,7 +113,7 @@ const pageData = {
       "At Trupeak, your sleep is treated with the same precision as any other vital sign. Book a consultation to explore how small changes in your sleep can unlock massive shifts in health, clarity, and resilience.",
     buttonText: "Book Your Appointment",
     buttonLink: "#",
-    backgroundImage: "/images/regenerative-therapies/sleep/6.webp"
+    backgroundImage: "/images/weight-lean/sleep-cycle/6.webp"
   }
 };
 

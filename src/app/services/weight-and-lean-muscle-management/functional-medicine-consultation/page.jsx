@@ -15,12 +15,12 @@ const pageData = {
   hero: {
     title: "Functional Medicine Consultation",
     subtitle: "Uncover what’s beneath the surface. Personalized health starts with precision insight.",
-    mainImage: "/images/regenerative-therapies/iv-theraphy/2.webp",
-    circleImage: "/images/regenerative-therapies/iv-theraphy/1.webp"
+    mainImage: "/images/weight-lean/functional-medicine/1.webp",
+    circleImage: "/images/weight-lean/functional-medicine/2.webp"
   },
   imageText: {
     description: "At TruPeak, lasting transformation starts with uncovering the root causes of symptoms like weight gain, fatigue, poor recovery, and inflammation. Our Functional Medicine Consultation uses clinical data and system-level insights to identify hormonal, gut, and immune imbalances, providing a personalized, science-driven roadmap for optimal health.",
-    image: "/images/regenerative-therapies/iv-theraphy/2.webp",
+    image: "/images/weight-lean/functional-medicine/2.webp",
     reverse: true,
     bgColor: "bg-one",
     textColor: "text-two"
@@ -29,7 +29,7 @@ const pageData = {
     title: "Why Functional Medicine Matters",
     description:
       "Treating symptoms without addressing their root cause often leads to temporary relief. At Trupeak, we focus on system-level insight. With functional diagnostics and deep clinical evaluation:",
-    image: "/images/regenerative-therapies/iv-theraphy/3.webp",
+    image: "/images/weight-lean/functional-medicine/3.webp",
     pointsLeft: [
       "You uncover the root causes behind symptoms like fatigue, weight gain, and inflammation",
       "You identify hormonal, gut, and immune imbalances early before they progress",
@@ -59,7 +59,7 @@ const pageData = {
   whatWeOffer: {
     title: "What We Offer",
     description: "At TruPeak, our Personalized Functional Medicine Assessment identifies root causes of imbalance and guides tailored interventions for optimal health.",
-    image: "/images/regenerative-therapies/iv-theraphy/3.webp",
+    image: "/images/weight-lean/functional-medicine/3.webp",
     points: [
       { title: "Hormonal & Metabolic Review", description: "We assess thyroid, cortisol, estrogen/testosterone levels along with chronic condition profiles." },
       { title: "Inflammation & Immunity", description: "We evaluate gut health, food sensitivities, and autoimmune patterns." },
@@ -99,7 +99,7 @@ const pageData = {
     description: "Whether you're navigating unexplained symptoms or want to stay ahead of future issues, a Functional Medicine Consultation at Trupeak gives you the clarity and control to take charge of your health.",
     buttonText: "Book Your Appointment",
     buttonLink: "#",
-    backgroundImage: "/images/regenerative-therapies/iv-theraphy/5.webp"
+    backgroundImage: "/images/weight-lean/functional-medicine/5.webp"
   }
 };
 

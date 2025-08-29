@@ -15,12 +15,12 @@ const pageData = {
   hero: {
     title: "MuscleSound Analysis (Muscle Ultrasound)",
     subtitle: "Visualize muscle quality, not just quantity. Optimize recovery, strength, and performance from the inside out.",
-    mainImage: "/images/regenerative-therapies/musclesound/1.webp",
-    circleImage: "/images/regenerative-therapies/musclesound/2.webp"
+    mainImage: "/images/weight-lean/muscle-sound/1.webp",
+    circleImage: "/images/weight-lean/muscle-sound/2.webp"
   },
   imageText: {
     description: "At Trupeak, our MuscleSound Analysis goes beyond traditional body composition tools to assess muscle health at a cellular level. Whether you're recovering from illness, managing fatigue, or optimizing your performance, this technology offers precise insights into how your muscles are functioning and healing.",
-    image: "/images/regenerative-therapies/musclesound/3.webp",
+    image: "/images/weight-lean/muscle-sound/3.webp",
     reverse: true,
     bgColor: "bg-one",
     textColor: "text-two"
@@ -29,7 +29,7 @@ const pageData = {
     title: "Why Muscle Health Matters",
     description:
       "Your muscle quality affects much more than strength or appearance. Low muscle density is linked to:",
-    image: "/images/regenerative-therapies/musclesound/4.webp",
+    image: "/images/weight-lean/muscle-sound/4.webp",
     pointsLeft: [
       "Slower metabolism and weight gain",
       "Insulin resistance and poor glucose control",
@@ -58,7 +58,7 @@ const pageData = {
   whatWeOffer: {
     title: "Who This Is For",
     description: "MuscleSound Analysis is ideal for:",
-    image: "/images/regenerative-therapies/musclesound/5.webp",
+    image: "/images/weight-lean/muscle-sound/5.webp",
     points: [
       { title: "Individuals over 40 years of age", description: "Facing muscle loss or slowed metabolism." },
       { title: "Athletes", description: "Tracking performance and recovery baselines." },
@@ -95,7 +95,7 @@ const pageData = {
     description: "Book your Muscle Ultrasound consultation today and take the first step toward optimized performance, healing, and resilience.",
     buttonText: "Book Your Appointment",
     buttonLink: "#",
-    backgroundImage: "/images/regenerative-therapies/musclesound/6.webp"
+    backgroundImage: "/images/weight-lean/muscle-sound/6.webp"
   }
 };
 

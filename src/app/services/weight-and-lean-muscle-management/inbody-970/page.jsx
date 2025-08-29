@@ -15,13 +15,13 @@ const pageData = {
   hero: {
     title: "InBody 970: Bio-electrical Impedance Analysis",
     subtitle: "Measure more than weight. Understand your biology.",
-    mainImage: "/images/regenerative-therapies/inbody/1.webp",
-    circleImage: "/images/regenerative-therapies/inbody/2.webp"
+    mainImage: "/images/weight-lean/inbody/2.webp",
+    circleImage: "/images/weight-lean/inbody/1.webp"
   },
   imageText: {
     description:
       "At TruPeak, the InBody 970 goes beyond standard scales to measure muscle mass, fat, fluid distribution, and visceral fat with clinical precision. This data guides personalized nutrition, weight management, and performance plans, helping tailor interventions for fat loss, muscle gain, recovery, or overall health.",
-    image: "/images/regenerative-therapies/inbody/3.webp",
+    image: "/images/weight-lean/inbody/3.webp",
     reverse: true,
     bgColor: "bg-one",
     textColor: "text-two"
@@ -30,7 +30,7 @@ const pageData = {
     title: "Why InBody 970 Matters",
     description:
       "Body composition is a better predictor of long-term health than weight alone. The InBody 970 measures muscle, fat, and water levels in under a minute using safe electrical currents, providing a detailed analysis that traditional scales cannot. Low muscle mass and excess fat are linked to:",
-    image: "/images/regenerative-therapies/inbody/4.webp",
+    image: "/images/weight-lean/inbody/4.webp",
     pointsLeft: [
       "Slower metabolism and weight loss difficulty",
       "Higher risk of insulin resistance and inflammation"
@@ -58,7 +58,7 @@ const pageData = {
   whatWeOffer: {
     title: "Who This Is For",
     description: "The InBody 970 assessment is recommended for:",
-    image: "/images/regenerative-therapies/inbody/5.webp",
+    image: "/images/weight-lean/inbody/5.webp",
     points: [
       {
         title: "Individuals on structured weight loss or nutrition programs",
@@ -111,7 +111,7 @@ const pageData = {
       "Schedule your body composition analysis and receive a comprehensive interpretation from our functional health team. Your results will shape a personalized plan that supports your goals with clinical clarity and expert care.",
     buttonText: "Book Your Appointment",
     buttonLink: "#",
-    backgroundImage: "/images/regenerative-therapies/inbody/6.webp"
+    backgroundImage: "/images/weight-lean/inbody/6.webp"
   }
 };
 

@@ -8,7 +8,7 @@ const BlogSection = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://trupeakhealth.in/masterlogin/wp-json/custom-api/v1/blogs")
+    fetch("https://backend.trupeakhealth.in/wp-json/custom-api/v1/blogs/")
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter((item) => item.post_type === "post");

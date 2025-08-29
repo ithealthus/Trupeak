@@ -15,13 +15,13 @@ const pageData = {
   hero: {
     title: "Q-NRG: Indirect Calorimetry",
     subtitle: "Precision in every calorie. Clarity in every plan.",
-    mainImage: "/images/regenerative-therapies/q-nrg/1.webp",
-    circleImage: "/images/regenerative-therapies/q-nrg/2.webp"
+    mainImage: "/images/weight-lean/q-nrg/2.webp",
+    circleImage: "/images/weight-lean/q-nrg/1.webp"
   },
   imageText: {
     description:
       "At TruPeak, we use Q-NRG, a state-of-the-art Indirect Calorimetry device, to measure your exact Resting Metabolic Rate (RMR) and interpret the results. Unlike formulas or wearables, this data-driven approach accurately guides nutrition, exercise, and treatment decisions, helping you understand your metabolism and make informed health choices.",
-    image: "/images/regenerative-therapies/q-nrg/3.webp",
+    image: "/images/weight-lean/q-nrg/3.webp",
     reverse: true,
     bgColor: "bg-one",
     textColor: "text-two"
@@ -30,7 +30,7 @@ const pageData = {
     title: "Why Calorimetry Matters",
     description:
       "Indirect calorimetry shows how efficiently your body burns calories at rest, providing precise insights for nutrition and health planning.",
-    image: "/images/regenerative-therapies/q-nrg/4.webp",
+    image: "/images/weight-lean/q-nrg/4.webp",
     pointsLeft: [
       "Measures oxygen intake and carbon dioxide output to assess metabolism",
       "Accurately determines daily calorie needs"
@@ -56,7 +56,7 @@ const pageData = {
   whatWeOffer: {
     title: "Who This Is For",
     description: "Q-NRG testing is ideal for individuals who:",
-    image: "/images/regenerative-therapies/q-nrg/5.webp",
+    image: "/images/weight-lean/q-nrg/5.webp",
     points: [
       {
         title: "Individuals in weight management programs",
@@ -105,7 +105,7 @@ const pageData = {
       "Schedule your Q-NRG Indirect Calorimetry session at Trupeak™ to receive a precision-based metabolic profile. Let every calorie work without going against your health goals.",
     buttonText: "Book Your Appointment",
     buttonLink: "#",
-    backgroundImage: "/images/regenerative-therapies/q-nrg/6.webp"
+    backgroundImage: "/images/weight-lean/q-nrg/6.webp"
   }
 };
 

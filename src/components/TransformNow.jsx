@@ -33,7 +33,7 @@
 
 // export default TransformNow;
 import React from "react";
-
+import Link from 'next/link';
 const TransformNow = () => {
   return (
     <section className="relative bg-white min-h-[500px] overflow-hidden px-4 sm:px-8 md:px-12">
@@ -49,9 +49,11 @@ const TransformNow = () => {
           <p className="font-body text-primary text-sm sm:text-base md:text-lg font-semibold max-w-md mb-6">
             Book your appointment or request a call-back.
           </p>
-          <button className="bg-[#2C886A] text-white text-lg sm:text-xl font-bold font-body px-6 sm:px-10 py-2 rounded-[40px] shadow-lg hover:bg-[#287256] transition">
-            Transform Now
-          </button>
+          <Link href="/contact">
+  <button className="bg-[#2C886A] text-white text-lg sm:text-xl font-bold font-body px-6 sm:px-10 py-2 rounded-[40px] shadow-lg hover:bg-[#287256] transition">
+    Transform Now
+  </button>
+</Link>
         </div>
 
         {/* Spacer for layout on desktop */}

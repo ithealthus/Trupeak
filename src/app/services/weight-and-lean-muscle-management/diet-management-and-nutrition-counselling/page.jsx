@@ -14,13 +14,13 @@ const pageData = {
   hero: {
     title: "Diet Management and Nutrition Counselling",
     subtitle: "Precision nutrition for body, brain, and longevity",
-    mainImage: "/images/regenerative-therapies/nutrition/1.webp",
-    circleImage: "/images/regenerative-therapies/nutrition/2.webp"
+    mainImage: "/images/weight-lean/diet-management/2.webp",
+    circleImage: "/images/weight-lean/diet-management/1.webp"
   },
   imageText: {
     description:
       "At TruPeak, nutrition is a clinical intervention that can reduce inflammation, optimize metabolism, and restore system balance. Our Diet Management and Nutrition Counseling combines diagnostic data with personalized strategies to address weight resistance, hormonal shifts, muscle loss, or chronic inflammation, helping you eat with clarity and purpose.",
-    image: "/images/regenerative-therapies/nutrition/3.webp",
+    image: "/images/weight-lean/diet-management/3.webp",
     reverse: true,
     bgColor: "bg-one",
     textColor: "text-two"
@@ -29,7 +29,7 @@ const pageData = {
     title: "Why This Matters",
     description:
       "Understanding your body’s unique needs allows nutrition to be a precise, effective intervention rather than guesswork.",
-    image: "/images/regenerative-therapies/nutrition/4.webp",
+    image: "/images/weight-lean/diet-management/4.webp",
     pointsLeft: [
       "Supports energy optimization and metabolic efficiency",
       "Maintains lean muscle and reduces excess fat"
@@ -58,7 +58,7 @@ const pageData = {
     title: "What We Offer",
     description:
       "Every client begins with a comprehensive consultation, which includes:",
-    image: "/images/regenerative-therapies/nutrition/5.webp",
+    image: "/images/weight-lean/diet-management/5.webp",
     points: [
       {
         title: "In-depth diet and symptom history",
@@ -118,7 +118,7 @@ const pageData = {
       "Food is your foundation for healing and performance. With expert guidance and diagnostic insight, we tailor nutrition plans that align with your body's unique needs. Let your data guide your diet.",
     buttonText: "Book Your Appointment",
     buttonLink: "#",
-    backgroundImage: "/images/regenerative-therapies/nutrition/6.webp"
+    backgroundImage: "/images/weight-lean/diet-management/6.webp"
   }
 };
 

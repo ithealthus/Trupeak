@@ -153,7 +153,7 @@ export default function Navbar() {
               href="/contact"
               className="bg-three text-white px-6 py-2 rounded-full hover:bg-three/80 transition text-xl"
             >
-              Join Us
+              Contact Us
             </Link>
           </div>
 
