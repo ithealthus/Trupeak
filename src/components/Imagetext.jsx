@@ -13,12 +13,13 @@ export default function Imagetext({
   textColor = "text-gray-800",
   buttonText,
   buttonLink,
+  radius
 }) {
   return (
     <section className={clsx("w-full py-12 px-6 md:px-12", bgColor)}>
       <div
         className={clsx(
-          "max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8",
+          "max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-8",
           reverse && "md:flex-row-reverse"
         )}
       >
@@ -47,7 +48,7 @@ export default function Imagetext({
         </div>
 
         {/* Image */}
-        <div className="w-full md:w-1/2 rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-xl ">
+        <div className={`w-full md:w-1/2 rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-xl ${radius === "true" ? "rounded-3xl" : ''}`}>
           <Image
             src={image}
             alt={title}
