@@ -24,21 +24,21 @@ export default function MegaMenu({ isOpen }) {
       category: { name: "Weight and Lean Muscle Management", href: "/services/weight-and-lean-muscle-management" },
       subServices: [
         { name: "Weight Optimisation Tracking", href: "/services/weight-and-lean-muscle-management/weight-optimisation-tracking" },
-        { name: "Functional Medicine Consultation", href: "/services/weight-and-lean-muscle-management/weight-management" },
-        { name: "MuscleSound Analysis (Muscle Ultrasound)", href: "/services/weight-and-lean-muscle-management/fitness" },
-        { name: "InBody 970: Bio-electrical Impedance Analysis", href: "/services/weight-and-lean-muscle-management/nutrition" },
-        { name: "Q-NRG: Indirect Calorimetry", href: "/services/weight-and-lean-muscle-management/weight-management" },
-        { name: "Sleep Cycle Analysis at Trupeak", href: "/services/weight-and-lean-muscle-management/fitness" },
-        { name: "Diet Management and Nutrition Counselling", href: "/services/weight-and-lean-muscle-management/fitness" }
+        { name: "Functional Medicine Consultation", href: "/services/weight-and-lean-muscle-management/functional-medicine-consultation" },
+        { name: "MuscleSound Analysis (Muscle Ultrasound)", href: "/services/weight-and-lean-muscle-management/musclesound-analysis" },
+        { name: "InBody 970: Bio-electrical Impedance Analysis", href: "/services/weight-and-lean-muscle-management/inbody-970" },
+        { name: "Q-NRG: Indirect Calorimetry", href: "/services/weight-and-lean-muscle-management/q-nrg" },
+        { name: "Sleep Cycle Analysis at Trupeak", href: "/services/weight-and-lean-muscle-management/sleep-cycle-analysis" },
+        { name: "Diet Management and Nutrition Counselling", href: "/services/weight-and-lean-muscle-management/diet-management-and-nutrition-counselling" }
       ]
     },
     {
       category: { name: "Immunity and Longevity", href: "/services/immunity-and-longevity" },
       subServices: [
-        { name: "Immune System Assessment and Analysis", href: "/nutrition" },
-        { name: "Genetic Mapping", href: "/weight-management" },
-        { name: "Gut Microbiome Mapping", href: "/fitness" },
-        { name: "Biological Age Mapping", href: "/fitness" }
+        { name: "Immune System Assessment and Analysis", href: "/services/immunity-and-longevity/immune-system-assessment-and-analysis" },
+        { name: "Genetic Mapping", href: "/services/immunity-and-longevity/genetic-mappings" },
+        { name: "Gut Microbiome Mapping", href: "/services/immunity-and-longevity/gut-microbiome-mapping" },
+        { name: "Biological Age Mapping", href: "/services/immunity-and-longevity/biological-age-mapping" }
       ]
     },
     {
