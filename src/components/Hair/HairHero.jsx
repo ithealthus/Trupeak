@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const HairHero = ({ title, subtitle, mainImage, circleImage }) => {
   return (
-      <section className="relative w-full bg-two overflow-hidden mt-20 min-h-[90vh]">
-        <div className="flex flex-col md:flex-row items-stretch w-full relative min-h-[90vh]">          
+      <section className="relative w-full bg-two overflow-hidden mt-20 ">
+        <div className="flex flex-col md:flex-row items-stretch w-full relative lg:min-h-[90vh]">          
           {/* Left Section (Text) */}
             <div className="bg-two text-white flex flex-col justify-center items-center md:items-start text-center md:text-left px-6 sm:px-12 md:px-16 lg:px-24 py-12 md:w-1/2 relative z-10 md:pr-20 lg:pr-32">
                 <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">

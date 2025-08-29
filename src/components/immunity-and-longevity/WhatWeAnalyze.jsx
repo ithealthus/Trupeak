@@ -15,30 +15,32 @@ export default function AnalyzeSection({ sectionData }) {
         </p>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {items.map((item, i) => (
-            <div
-              key={i}
-              className="bg-[#0C2340] text-white rounded-xl shadow-lg overflow-hidden flex flex-col"
-            >
-              {/* Image */}
-              <div className="relative w-full h-40">
-                <Image
-                  src={item.img}
-                  alt={item.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+  {items.map((item, i) => (
+    <div
+      key={i}
+      className="bg-two text-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center  justify-start p-6"
+    >
+      {/* Image */}
+      <div className="flex justify-center items-center w-full mb-4">
+        <Image
+          src={item.img}
+          alt={item.title}
+          width={1000} // or dynamic based on design
+          height={1000}
+          className="object-cover rounded-lg"
+        />
+      </div>
 
-              {/* Text */}
-              <div className="p-4 flex flex-col flex-1">
-                <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                <p className="text-sm opacity-90">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* Text */}
+      <div className="flex flex-col text-left w-full">
+        <h3 className="font-semibold text-xl mb-2 text-one">{item.title}</h3>
+        <p className="text-sm text-one">{item.desc}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
       </div>
     </section>
   );

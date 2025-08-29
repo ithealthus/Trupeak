@@ -101,10 +101,10 @@ export default function MegaMenu({ isOpen }) {
     {
       category: { name: "Technology", href: "/services/technology" },
       subServices: [
-        { name: "Data-driven Healthcare", href: "/nutrition" },
-        { name: "Data-driven tracking", href: "/weight-management" },
-        { name: "Analysing over 800 Biomarkers", href: "/fitness" },
-        { name: "Monthly automated reporting", href: "/nutrition" },
+        { name: "Data-driven Healthcare", href: "/services/technology/data-driven-healthcare" },
+        { name: "Data-driven tracking", href: "/services/technology/data-driven-tracking" },
+        { name: "Analysing over 800 Biomarkers", href: "/services/technology/analysing-over-800-biomarkers" },
+        { name: "Monthly automated reporting", href: "/services/technology/monthly-automated-reporting" },
       ]
     }
   ];

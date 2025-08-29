@@ -18,13 +18,13 @@ const pageData = {
   hero: {
     title: "Immune System Assessment & Analysis",
     subtitle: "Your immune system holds the key to both disease resistance and graceful aging.",
-    mainImage: "/images/regenerative-therapies/q-nrg/1.webp",
-    circleImage: "/images/regenerative-therapies/q-nrg/2.webp"
+    mainImage: "/images/immunity-long/immune-system-assessment-analysis/2.webp",
+    circleImage: "/images/immunity-long/immune-system-assessment-analysis/1.webp"
   },
   imageText: {
     description:
       "Immune evaluation goes beyond routine bloodwork. This in-depth assessment reveals how your immune system performs under stress, responds to infections, and manages chronic inflammation. It gives you a clear picture of your immune strengths, weaknesses, and where support is most needed.By testing a set of reliable clinical biomarkers, we assess how well your body detects threats, controls inflammation, and stays in immune balance. Whether you're facing frequent illnesses, slow healing, autoimmune issues, or aiming to strengthen your natural defenses, this evaluation reveals how your immune system is functioning and where improvement is possible.",
-    image: "/images/regenerative-therapies/q-nrg/3.webp",
+    image: "/images/immunity-long/immune-system-assessment-analysis/3.webp",
     reverse: true,
     bgColor: "bg-one",
     textColor: "text-two"
@@ -35,22 +35,22 @@ const pageData = {
     "We assess key immune markers to reveal your body’s defense, inflammation response, and balance, highlighting areas needing support.",
   items: [
     {
-      img: "/images/lymphocyte.png",
+      img: "/images/immunity-long/immune-system-assessment-analysis/4.webp",
       title: "Lymphocyte Subsets",
       desc: "CD4/CD8 T-cells, NK cells, B-cells activity",
     },
     {
-      img: "/images/inflammation.png",
+      img: "/images/immunity-long/immune-system-assessment-analysis/5.webp",
       title: "Inflammatory Markers",
       desc: "CRP, IL-6, TNF-alpha",
     },
     {
-      img: "/images/immunoglobulin.png",
+      img: "/images/immunity-long/immune-system-assessment-analysis/6.webp",
       title: "Immunoglobulin Levels",
       desc: "IgG, IgA, IgM",
     },
     {
-      img: "/images/tcell.png",
+      img: "/images/immunity-long/immune-system-assessment-analysis/7.webp",
       title: "T-cell exhaustion markers",
       desc: "and cytokine balance",
     },
@@ -59,7 +59,7 @@ const pageData = {
 programGoals: {
     title: "Why It Matters",
     description: `Immune function impacts everything from healing and vaccine response to cancer risk and daily energy. Chronic stress, poor nutrition, and toxin exposure silently erode immunity over time. Catching imbalances early allows for smarter, preventive care.`,
-    image: "/images/weight/5.jpg",
+    image: "/images/immunity-long/immune-system-assessment-analysis/8.webp",
   },
    dynamicSection: {
   title: "Is This For You?",
@@ -73,8 +73,8 @@ programGoals: {
     { type: "text", title: "Seeking long-term protection from chronic inflammation" },
     { type: "text", title: "You fall sick often, recover slowly, or feel chronically fatigued" },
     { type: "text", title: "Frequent use of antibiotics, steroids, or immune drugs." },
-    { type: "image", image: "/images/doctor-1.webp" },
-    { type: "image", image: "/images/doctor-2.webp" }
+    { type: "image", image: "/images/immunity-long/immune-system-assessment-analysis/9.webp" },
+    { type: "image", image: "/images/immunity-long/immune-system-assessment-analysis/10.webp" }
   ]
 },
 data : {
@@ -95,7 +95,7 @@ data : {
       "Schedule your Q-NRG Indirect Calorimetry session at Trupeak™ to receive a precision-based metabolic profile. Let every calorie work without going against your health goals.",
     buttonText: "Book Your Appointment",
     buttonLink: "#",
-    backgroundImage: "/images/regenerative-therapies/q-nrg/6.webp"
+    backgroundImage: "/images/immunity-long/immune-system-assessment-analysis/11.webp"
   }
 };
 

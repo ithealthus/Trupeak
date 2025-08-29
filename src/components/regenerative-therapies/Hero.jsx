@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Hero = ({ title, subtitle, mainImage, circleImage }) => {
   return (
-    <section className="relative w-full bg-two overflow-hidden mt-20 min-h-[90vh]">
-      <div className="flex flex-col md:flex-row items-stretch w-full relative min-h-[90vh]">
+   <section className="relative w-full bg-two overflow-hidden mt-20 ">
+        <div className="flex flex-col md:flex-row items-stretch w-full relative lg:min-h-[90vh]">      
         
         {/* Left Section (Text) */}
         <div

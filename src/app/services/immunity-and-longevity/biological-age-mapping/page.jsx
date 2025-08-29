@@ -13,13 +13,13 @@ const pageData = {
   hero: {
     title: "Biological Age Mapping",
     subtitle: "Your chronological age is fixed, but your biological aging is something you can influence.",
-    mainImage: "/images/biological-age/main.webp", // update with actual image path
-    circleImage: "/images/biological-age/circle.webp" // update with actual image path
+    mainImage: "/images/immunity-long/biological-age-mapping/2.webp", // update with actual image path
+    circleImage: "/images/immunity-long/biological-age-mapping/1.webp" // update with actual image path
   },
   imageText: {
     description:
       "Biological Age Mapping evaluates how your body is aging on a cellular level, independent of your chronological age. By measuring DNA methylation, telomere length, mitochondrial function, and hormone regulation, we uncover the real pace of your internal aging and offer strategies to reverse it. At Trupeak, we combine advanced lab diagnostics with data-driven clinical analysis to identify early aging markers and create targeted plans to restore vitality and longevity.",
-    image: "/images/biological-age/detail.webp", // update with actual image path
+    image: "/images/immunity-long/biological-age-mapping/3.webp", // update with actual image path
     reverse: true,
     bgColor: "bg-one",
     textColor: "text-two"
@@ -30,22 +30,22 @@ const pageData = {
       "We examine key biological aging markers to reveal your true physiological age and how to slow or reverse it.",
     items: [
       {
-        img: "/images/icons/epigenetic.png",
+        img: "/images/immunity-long/biological-age-mapping/4.webp",
         title: "Epigenetic Age",
         desc: "DNA methylation patterns"
       },
       {
-        img: "/images/icons/telomere.png",
+        img: "/images/immunity-long/biological-age-mapping/5.webp",
         title: "Cellular Aging",
         desc: "Telomere length"
       },
       {
-        img: "/images/icons/mitochondria.png",
+        img: "/images/immunity-long/biological-age-mapping/6.webp",
         title: "Energy & Resilience",
         desc: "Mitochondrial function and oxidative stress"
       },
       {
-        img: "/images/icons/hormonal.png",
+        img: "/images/immunity-long/biological-age-mapping/7.webp",
         title: "Hormonal & Metabolic Health",
         desc: "Thyroid, cortisol, insulin, and sex hormones"
       }
@@ -55,7 +55,7 @@ const pageData = {
     title: "Why It Matters",
     description:
       "Aging is the #1 risk factor for chronic disease. Biological Age Mapping provides early insight into how your internal systems are performing and how to slow the decline. It empowers you to act now to protect energy, cognition, immunity, and metabolic health as you age.",
-    image: "/images/biological-age/why-it-matters.webp" // update with actual image path
+    image: "/images/immunity-long/biological-age-mapping/8.webp" // update with actual image path
   },
   dynamicSection: {
     title: "Is This For You?",
@@ -69,8 +69,8 @@ const pageData = {
       { type: "text", title: "You have a family history of age-related disease (diabetes, dementia, heart disease)" },
       { type: "text", title: "You’re enrolled in a longevity or functional wellness program" },
       { type: "text", title: "You want to track how your lifestyle, fitness, or diet is affecting your biology" },
-      { type: "image", image: "/images/biological-age/doctor-1.webp" },
-      { type: "image", image: "/images/biological-age/doctor-2.webp" }
+      { type: "image", image: "/images/immunity-long/biological-age-mapping/9.webp" },
+      { type: "image", image: "/images/immunity-long/biological-age-mapping/10.webp" }
     ]
   },
   data: {
@@ -90,7 +90,7 @@ const pageData = {
       "Redefine what aging means for you. Schedule your Biological Age Mapping session at Trupeak™ and take control of your longevity.",
     buttonText: "Book Your Appointment",
     buttonLink: "#",
-    backgroundImage: "/images/biological-age/cta.webp" // update with actual image path
+    backgroundImage: "/images/immunity-long/biological-age-mapping/11.webp" // update with actual image path
   }
 };
 
