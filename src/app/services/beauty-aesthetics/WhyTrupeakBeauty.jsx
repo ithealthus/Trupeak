@@ -4,10 +4,10 @@ import { FaArrowRight } from "react-icons/fa";
 export default function WhyTrupeakBeauty({ title, points, image }) {
   return (
     <section className="w-full py-12 md:py-8 bg-white">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row gap-10">
         
         {/* Left Content */}
-        <div className="md:w-1/2">
+        <div className="w-full md:w-1/2 flex flex-col justify-top">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {title}
           </h2>
@@ -18,7 +18,7 @@ export default function WhyTrupeakBeauty({ title, points, image }) {
                 <div className="bg-[#19B36A] p-2 rounded-full shadow-md flex items-center justify-center">
                   <FaArrowRight className="text-white text-sm" />
                 </div>
-                <p className="text-gray-700 text-xl sm:text-md leading-relaxed">
+                <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
                   {point}
                 </p>
               </div>
@@ -28,11 +28,11 @@ export default function WhyTrupeakBeauty({ title, points, image }) {
 
         {/* Right Image */}
         {image && (
-          <div className="md:w-1/2">
+          <div className="w-full md:w-1/2 flex">
             <img
               src={image}
               alt={title}
-              className="rounded-xl shadow-lg w-full h-[30rem] object-cover"
+              className="rounded-xl shadow-lg w-full h-[25rem] object-cover"
             />
           </div>
         )}

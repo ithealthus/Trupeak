@@ -24,20 +24,87 @@ export default function MegaMenu({ isOpen }) {
       category: { name: "Weight and Lean Muscle Management", href: "/services/weight-and-lean-muscle-management" },
       subServices: [
         { name: "Weight Optimisation Tracking", href: "/services/weight-and-lean-muscle-management/weight-optimisation-tracking" },
-        { name: "Functional Medicine Consultation", href: "/weight-management" },
-        { name: "MuscleSound Analysis (Muscle Ultrasound)", href: "/fitness" },
-        { name: "InBody 970: Bio-electrical Impedance Analysis", href: "/nutrition" },
-        { name: "Q-NRG: Indirect Calorimetry", href: "/weight-management" },
-        { name: "Sleep Cycle Analysis at Trupeak", href: "/fitness" },
-        { name: "Diet Management and Nutrition Counselling", href: "/fitness" }
+        { name: "Functional Medicine Consultation", href: "/services/weight-and-lean-muscle-management/weight-management" },
+        { name: "MuscleSound Analysis (Muscle Ultrasound)", href: "/services/weight-and-lean-muscle-management/fitness" },
+        { name: "InBody 970: Bio-electrical Impedance Analysis", href: "/services/weight-and-lean-muscle-management/nutrition" },
+        { name: "Q-NRG: Indirect Calorimetry", href: "/services/weight-and-lean-muscle-management/weight-management" },
+        { name: "Sleep Cycle Analysis at Trupeak", href: "/services/weight-and-lean-muscle-management/fitness" },
+        { name: "Diet Management and Nutrition Counselling", href: "/services/weight-and-lean-muscle-management/fitness" }
       ]
     },
     {
       category: { name: "Immunity and Longevity", href: "/services/immunity-and-longevity" },
       subServices: [
-        { name: "Nutrition Counseling", href: "/nutrition" },
-        { name: "Weight Management", href: "/weight-management" },
-        { name: "Fitness Optimization", href: "/fitness" }
+        { name: "Immune System Assessment and Analysis", href: "/nutrition" },
+        { name: "Genetic Mapping", href: "/weight-management" },
+        { name: "Gut Microbiome Mapping", href: "/fitness" },
+        { name: "Biological Age Mapping", href: "/fitness" }
+      ]
+    },
+    {
+      category: { name: "Pain Management and Recovery", href: "/services/pain-management-and-recovery" },
+      subServices: [
+        { name: "Chronic Back Ache Induced by Uric Acid", href: "/nutrition" },
+        { name: "Arthritis", href: "/weight-management" },
+        { name: "Accident Recovery", href: "/fitness" },
+        { name: "Joint Pain Management", href: "/nutrition" },
+        { name: "Sports Recovery", href: "/weight-management" },
+        { name: "Cryotherapy", href: "/fitness" },
+        { name: "Localized Cryotherapy", href: "/fitness" },
+      ]
+    },
+    {
+      category: { name: "Women-centric Health Interventions", href: "/services/women-centric-health-interventions" },
+      subServices: [
+       { name: "PCOS and PCOD", href: "/nutrition" },
+        { name: "Menopause-Related Issues", href: "/weight-management" },
+        { name: "Hormone Balancing", href: "/fitness" },
+        { name: "Uterine Removal Complications in Older Women", href: "/nutrition" },
+        { name: "HPV Vaccines", href: "/weight-management" },
+        { name: "UTIs (Urinary Tract Infections)", href: "/fitness" },
+        { name: "Osteoporosis", href: "/fitness" },
+      ]
+    },
+    {
+      category: { name: "Beauty Aesthetics", href: "/services/beauty-aesthetics" },
+      subServices: [
+        { name: "Hair", href: "/nutrition" },
+        { name: "Face", href: "/weight-management" },
+        { name: "Lasers", href: "/fitness" },
+        { name: "Women’s Intimate Aesthetics", href: "/nutrition" },
+        { name: "HPV Vaccines", href: "/weight-management" },
+        { name: "Injectable Therapies (PRP, Botox, etc.)", href: "/fitness" },
+        { name: "Surgical References (Plastic)", href: "/fitness" },
+        { name: "Aesthetic Gynaecology", href: "/fitness" },
+      ]
+    },
+    {
+      category: { name: "Ergogenic Medicine", href: "/services/ergogenic-medicine" },
+      subServices: [
+        { name: "Sexual Health", href: "/nutrition" },
+        { name: "Fertility (Pre)", href: "/weight-management" },
+        { name: "Intimate Health Program", href: "/fitness" },
+        { name: "Endurance Boost", href: "/fitness" },
+        { name: "Sexually Transmitted Diseases (STDs)", href: "/nutrition" },
+      ]
+    },
+    {
+      category: { name: "Mental Health and Counselling", href: "/services/mental-health-and-counselling" },
+      subServices: [
+        { name: "Mental Health Peptides", href: "/nutrition" },
+        { name: "Chronic Illness counselling and support (Cancer specifically)", href: "/weight-management" },
+        { name: "Nutrition Management protocols", href: "/fitness" },
+        { name: "Psychologist sessions", href: "/fitness" },
+        { name: "Paediatric Counselling (ADHD and other issues)", href: "/nutrition" },
+      ]
+    },
+    {
+      category: { name: "Technology", href: "/services/technology" },
+      subServices: [
+        { name: "Data-driven Healthcare", href: "/nutrition" },
+        { name: "Data-driven tracking", href: "/weight-management" },
+        { name: "Analysing over 800 Biomarkers", href: "/fitness" },
+        { name: "Monthly automated reporting", href: "/nutrition" },
       ]
     }
   ];
