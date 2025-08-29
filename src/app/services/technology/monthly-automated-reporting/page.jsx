@@ -11,8 +11,8 @@ const pageData = {
   hero: {
     title: "Monthly Automated Reporting",
     subtitle: "Where consistency meets clarity",
-    mainImage: "/images/immunity-long/immune-system-assessment-analysis/2.webp",
-    circleImage: "/images/immunity-long/immune-system-assessment-analysis/1.webp"
+    mainImage: "/images/technology/monthly-automated-reporting/2.webp",
+    circleImage: "/images/technology/monthly-automated-reporting/1.webp"
   },
   cardsData : [
   {
@@ -38,7 +38,7 @@ const pageData = {
 ],
   approach: {
     title: "Why Our Approach Works",
-    image: "/images/sample-approach.webp", // replace with your image path
+    image: "/images/technology/monthly-automated-reporting/4.webp", // replace with your image path
     description:
       "Every report is reviewed by your care team before being shared, ensuring accuracy and relevance. We track improvements, flag early signs of imbalance, and provide timely insights to support better decision-making and accountability."
   }
@@ -57,7 +57,7 @@ const Page = () => {
       <Hero {...hero} />
       <ProgramGoals1  
         description="At Trupeak, we believe tracking your progress should be as simple as it is informative. Each month, you receive a detailed health tracking report that shows exactly how your body is responding to your personalised treatment plan."
-        image="/images/sample.webp"
+        image="/images/technology/monthly-automated-reporting/3.webp"
         reverse={true}
         sectionBg="bg-white"
         bgColor="bg-one"
@@ -67,7 +67,7 @@ const Page = () => {
       <ApproachSection {...pageData.approach} />
       <ResultsSection
       title="The Results?"
-      imageSrc="/images/results-image.jpg" // Replace with your image path
+      imageSrc="/images/technology/monthly-automated-reporting/5.webp" // Replace with your image path
       texts={[
         "Patients with complex or long-term goals have a clear structure and reassurance that their care is on track.",
         "Our reporting maintains transparency, measures outcomes, and keeps your treatment aligned with your evolving health needs, making your results undeniable.",

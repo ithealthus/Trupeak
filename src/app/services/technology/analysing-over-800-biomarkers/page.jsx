@@ -11,8 +11,8 @@ const pageData = {
   hero: {
     title: "Analyzing Over 800 Biomarkers",
     subtitle: "Where depth meets detail",
-    mainImage: "/images/immunity-long/immune-system-assessment-analysis/2.webp",
-    circleImage: "/images/immunity-long/immune-system-assessment-analysis/1.webp"
+    mainImage: "/images/technology/analyzing-over-800-biomarkers/2.webp",
+    circleImage: "/images/technology/analyzing-over-800-biomarkers/1.webp"
   },
   cardsData : [
   {
@@ -38,7 +38,7 @@ const pageData = {
 ],
   approach: {
     title: "Why It Matters",
-    image: "/images/sample-approach.webp", // replace with your image path
+    image: "/images/technology/analyzing-over-800-biomarkers/4.webp", // replace with your image path
     description:
       "By detecting small imbalances early, we can address them before they turn into symptoms. Our approach reveals underlying issues such as elevated stress hormones or poor nutrient absorption, providing the foundation for a truly personalised care plan from the start."
   }
@@ -57,7 +57,7 @@ const Page = () => {
       <Hero {...hero} />
       <ProgramGoals1  
         description="At Trupeak, we go far beyond standard testing. We measure more than 800 health markers across all major body systems to create a complete picture of your health from day one."
-        image="/images/sample.webp"
+        image="/images/technology/analyzing-over-800-biomarkers/3.webp"
         reverse={true}
         sectionBg="bg-white"
         bgColor="bg-one"
@@ -67,7 +67,7 @@ const Page = () => {
       <ApproachSection {...pageData.approach} />
       <ResultsSection
       title="The Results?"
-      imageSrc="/images/results-image.jpg" // Replace with your image path
+      imageSrc="/images/technology/analyzing-over-800-biomarkers/5.webp" // Replace with your image path
       texts={[
         "Every result is reviewed in context of your lifestyle, medical history, and goals, with a focus on patterns that track progress or reveal early warning signs.",
         "Care is guided by clear, evidence-driven insights that support recovery, resilience, and long-term balance, never assumptions.",

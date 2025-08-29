@@ -77,9 +77,33 @@ export default function Navbar() {
       category: "Weight and Lean Muscle Management",
       href: "/services/weight-and-lean-muscle-management",
       subServices: [
-        { name: "Nutrition Counseling", href: "#" },
-        { name: "Weight Management", href: "#" },
-        { name: "Fitness Optimization", href: "#" },
+        { name: "Weight Optimisation Tracking", href: "/services/weight-and-lean-muscle-management/weight-optimisation-tracking" },
+        { name: "Functional Medicine Consultation", href: "/services/weight-and-lean-muscle-management/functional-medicine-consultation" },
+        { name: "MuscleSound Analysis (Muscle Ultrasound)", href: "/services/weight-and-lean-muscle-management/musclesound-analysis" },
+        { name: "InBody 970: Bio-electrical Impedance Analysis", href: "/services/weight-and-lean-muscle-management/inbody-970" },
+        { name: "Q-NRG: Indirect Calorimetry", href: "/services/weight-and-lean-muscle-management/q-nrg" },
+        { name: "Sleep Cycle Analysis at Trupeak", href: "/services/weight-and-lean-muscle-management/sleep-cycle-analysis" },
+        { name: "Diet Management and Nutrition Counselling", href: "/services/weight-and-lean-muscle-management/diet-management-and-nutrition-counselling" }
+      ],
+    },
+    {
+      category: "Immunity and Longevity",
+      href: "/services/immunity-and-longevity",
+      subServices: [
+         { name: "Immune System Assessment and Analysis", href: "/services/immunity-and-longevity/immune-system-assessment-and-analysis" },
+        { name: "Genetic Mapping", href: "/services/immunity-and-longevity/genetic-mappings" },
+        { name: "Gut Microbiome Mapping", href: "/services/immunity-and-longevity/gut-microbiome-mapping" },
+        { name: "Biological Age Mapping", href: "/services/immunity-and-longevity/biological-age-mapping" }
+      ],
+    },
+    {
+      category: "Technology",
+      href: "/services/technology",
+      subServices: [
+         { name: "Data-driven Healthcare", href: "/services/technology/data-driven-healthcare" },
+        { name: "Data-driven tracking", href: "/services/technology/data-driven-tracking" },
+        { name: "Analysing over 800 Biomarkers", href: "/services/technology/analysing-over-800-biomarkers" },
+        { name: "Monthly automated reporting", href: "/services/technology/monthly-automated-reporting" },
       ],
     },
   ];
@@ -221,14 +245,10 @@ export default function Navbar() {
                 About Us
               </Link>
             </li>
-            <li>
-              <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
-                Contact Us
-              </Link>
-            </li>
+            
             <li>
               <Link
-                href="/join-us"
+                href="/contact"
                 className="bg-green-700 text-white px-4 py-2 rounded-full block text-center hover:bg-green-800 transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
