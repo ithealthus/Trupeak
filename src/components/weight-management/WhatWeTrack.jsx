@@ -55,15 +55,15 @@ export default function WhatWeTrack({ title, description, points }) {
               <Image
                 src="/images/logoondark1.png"
                 alt="icon"
-                width={28}
-                height={28}
+                width={40}
+                height={40}
                 className="object-contain"
               />
             </div>
 
             {/* RIGHT TEXT AREA */}
             <div className="p-4 flex-1 flex items-center">
-              <p className="text-gray-800 text-sm">{point}</p>
+              <p className="text-gray-800 font-semibold text-lg">{point}</p>
             </div>
           </div>
         ))}

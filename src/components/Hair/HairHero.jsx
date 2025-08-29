@@ -7,7 +7,7 @@ const HairHero = ({ title, subtitle, mainImage, circleImage }) => {
         <div className="flex flex-col md:flex-row items-stretch w-full relative lg:min-h-[90vh]">          
           {/* Left Section (Text) */}
             <div className="bg-two text-white flex flex-col justify-center items-center md:items-start text-center md:text-left px-6 sm:px-12 md:px-16 lg:px-24 py-12 md:w-1/2 relative z-10 md:pr-20 lg:pr-32">
-                <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight">
                 {title}
                 </h1>
                 <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl max-w-xl">

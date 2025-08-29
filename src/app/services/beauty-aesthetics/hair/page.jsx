@@ -1,15 +1,35 @@
 import Cards from '@/components/cards';
+import ContactForm from '@/components/ContactForm';
+import ContactSection from '@/components/ContactSection';
 import HairHero from '@/components/Hair/HairHero';
 import Imagetext from '@/components/Imagetext';
 import BenefitsSection from '@/components/NewComponent/BenefitsSection';
 import FAQSection from '@/components/NewComponent/FAQSection';
+import ProcedureSummary from '@/components/NewComponent/ProcedureSummary';
 import ProgramFit from '@/components/NewComponent/ProgramFit';
 import React from 'react';
 
+const procedureData = {
+  heading: "Procedure Summary",
+  procedures: [
+    {
+      title: "PRP Hair Therapy",
+      description: "About 45 minutes per session. No downtime.",
+    },
+    {
+      title: "FUE Hair Transplant",
+      description: "Outpatient Procedure. Most people resume basic activity in 2–3 days.",
+    },
+  ],
+  bottomText: [
+    "Are you seeking the best hair treatment in Mumbai that integrates science, care, and observable outcomes?",
+    "Truepeak offers hair restoration solutions rooted in medical precision and regenerative care.",
+  ],
+};
 const pageData = {
   hero: {
-    title: "Biological Age Mapping",
-    subtitle: "Your chronological age is fixed, but your biological aging is something you can influence.",
+    title: "Hair Restoration",
+    // subtitle: "Your chronological age is fixed, but your biological aging is something you can influence.",
     mainImage: "/images/beauty/hair/2.webp", // update with actual image path
     circleImage: "/images/beauty/hair/1.webp" // update with actual image path
   },
@@ -87,6 +107,9 @@ Every treatment is handled with discretion and care, using safe, medically guide
            <ProgramFit {...datas} />
            <BenefitsSection {...benefitsSection} />
            <FAQSection />
+           <ProcedureSummary {...procedureData} />
+      <ContactSection />
+      <ContactForm />
     </div>
   );
 }
