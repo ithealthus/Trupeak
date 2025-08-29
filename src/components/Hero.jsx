@@ -54,9 +54,16 @@ const Hero = () => {
 
       {/* 🔹 Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug">
-          Welcome to <span className="text-one">Trupeak Health</span>
-        </h1>
+       <h1
+  className="
+    text-2xl sm:text-4xl md:text-5xl lg:text-6xl 
+    font-bold leading-snug
+     pt-[24rem] md:pt-[12rem] lg:pt-[20rem] xl:pt-[28rem]
+  "
+>
+  Welcome to <span className="text-one">Trupeak Health</span>
+</h1>
+
         <h3 className="mt-8 text-base sm:text-lg md:text-xl lg:text-3xl font-medium text-white">
           Let’s begin your healthcare transformation journey
         </h3>
