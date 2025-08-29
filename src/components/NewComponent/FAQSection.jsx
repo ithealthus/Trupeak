@@ -56,24 +56,24 @@ export default function FAQSection() {
           alt="icon"
           className="w-8 h-8"
         />
-        <span>{faq.question}</span>
+        <span className="text-base lg:text-xl">{faq.question}</span>
       </div>
       {openIndex === index ? (
         <img
           src="/images/beauty/hair/open.svg" // replace with your image path
           alt="icon"
-          className="w-5 h-5"
+          className="w-5 h-5 -mr-3"
         />
       ) : (
        <img
           src="/images/beauty/hair/close.svg" // replace with your image path
           alt="icon"
-          className="w-5 h-5"
+          className="w-5 h-5 -mr-3"
         />
       )}
     </button>
     {openIndex === index && (
-      <div className="bg-one text-[#18243A] lg:pl-20 px-4 py-5 font-semibold text-xl">{faq.answer}</div>
+      <div className="bg-one text-[#18243A] lg:pl-20 px-4 py-5 font-semibold text-base lg:text-xl">{faq.answer}</div>
     )}
   </div>
 ))}

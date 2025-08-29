@@ -11,14 +11,14 @@ export default function BenefitsSection({ heading, items, image }) {
           {/* Row 1 */}
           <div className="flex flex-col sm:flex-row gap-6">
             {/* Heading */}
-            <div className="w-[62%] bg-[#1E2244] text-[#4CE0B3] font-bold text-2xl md:text-4xl rounded-3xl p-6 flex items-center justify-center text-left">
+            <div className="lg:w-[62%] bg-[#1E2244] text-[#4CE0B3] font-semibold lg:font-bold text-2xl md:text-4xl rounded-3xl p-6 flex items-center justify-center text-left">
               {heading}
             </div>
             {/* First 2 items */}
             {items.slice(0, 2).map((item, idx) => (
               <div
                 key={idx}
-                className="py-10 w-[35%] bg-[#1E2244] text-white rounded-3xl p-6 flex items-start justify-center text-left"
+                className="py-10 lg:w-[35%] bg-[#1E2244] text-white rounded-3xl p-6 flex items-start justify-center text-left"
               >
                 <p className="text-xl w-full">{item}</p>
               </div>
@@ -31,7 +31,7 @@ export default function BenefitsSection({ heading, items, image }) {
             {items.slice(2, 5).map((item, idx) => (
               <div
                 key={idx}
-                className="py-10 w-1/4 bg-[#1E2244] text-white rounded-3xl p-6 flex items-center justify-center text-left"
+                className="py-10 lg:w-1/4 bg-[#1E2244] text-white rounded-3xl p-6 flex items-center justify-center text-left"
               >
                 <p className="text-xl w-full">{item}</p>
               </div>
